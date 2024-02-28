@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            border:2px solid black;
+            height:300px;
+            width:300px;
+            margin-left:400px;
+            background-color:honeydew;
+        }
+        .border{
+            border:1px solid black;
+            text-align:center;
+        }
+        .h
+        {
+            color:blue;
+            text-align:center;
+           
+
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <script>
+
+        // for heading
+       var h = document.createElement("h2")
+        h.innerText = "User Details:"
+        document.body.appendChild(h)
+        h.setAttribute("class","h")
+        
+        // for create table and tr,columns
+       var t1 = document.createElement("table")
+       t1.setAttribute("class","table")
+
+       var tr1 = document.createElement("tr")
+       var td1 = document.createElement("td")
+       td1.innerText="UserName"
+       td1.style.color="blue"
+       td1.setAttribute("class","border")
+       var td2 = document.createElement("td")
+       td2.setAttribute("class","border")
+       td2.innerHTML = window.localStorage.getItem("UserName");
+    
+      
+       var tr2 = document.createElement("tr")
+       var td3 = document.createElement("td")
+       td3.setAttribute("class","border")
+       td3.innerText="Password"
+       td3.style.color="blueviolet"
+       var td4 = document.createElement("td")
+       td4.setAttribute("class","border")
+       td4.innerHTML = window.localStorage.getItem("Password");
+      
+       var tr3 = document.createElement("tr")
+       var td5 = document.createElement("td")
+       td5.innerText="Email"
+       td5.style.color="red"
+       td5.setAttribute("class","border")
+      
+       var td6 = document.createElement("td")
+       td6.setAttribute("class","border")
+       td6.innerHTML = window.localStorage.getItem("Email");
+      
+       var tr4 = document.createElement("tr")
+       var td7= document.createElement("td")
+       td7.setAttribute("class","border")
+       td7.innerText="Date Of Birth"
+       td7.style.color="crimson"
+       var td8 = document.createElement("td")
+       td8.setAttribute("class","border")
+       td8.innerHTML = window.localStorage.getItem("DOB");
+      
+       var tr5 = document.createElement("tr")
+       var td9= document.createElement("td")
+       td9.setAttribute("class","border")
+       td9.innerText="Mother Name"
+       td9.style.color="orange"
+       var td10 = document.createElement("td")
+       td10.setAttribute("class","border")
+       td10.innerHTML = window.localStorage.getItem("MotherName");
+
+       document.body.appendChild(t1)
+       t1.appendChild(tr1)
+       tr1.appendChild(td1)
+       tr1.appendChild(td2)
+
+       t1.appendChild(tr2)
+       tr2.appendChild(td3)
+       tr2.appendChild(td4)
+
+       t1.appendChild(tr3)
+       tr3.appendChild(td5)
+       tr3.appendChild(td6)
+
+       t1.appendChild(tr4)
+       tr4.appendChild(td7)
+       tr4.appendChild(td8)
+
+       t1.appendChild(tr5)
+       tr5.appendChild(td9)
+       tr5.appendChild(td10)
+
+    </script>
+</body>
+</html>

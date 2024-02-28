@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color:blue;
+        }
+       .b{
+        margin-left:400px;
+        border:2px solid black;
+        border-radius:20px;
+        background-color:linen;
+        font-size:20px;
+        margin-top:30px;
+        padding:10px;
+       }
+       .b1{
+        margin-left:400px;
+        border:2px solid black;
+        border-radius:20px;
+        background-color:cadetblue;
+        font-size:20px;
+        margin-top:30px;
+        padding:10px;
+       }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Task using Local Storage</h1>
+       
+    </center>
+
+<script>
+    var btn = document.createElement("button")
+    btn.innerText ="Register Here"
+    btn.setAttribute("class","b")
+    document.body.appendChild(btn)
+    btn.addEventListener("click",cb)
+
+    function cb(){
+      var a= prompt("Enter UserName:")
+      var b= prompt("Enter Password:")
+     var c= prompt("Enter Email:")
+     var d= prompt("Enter Date Of Birth:")
+     var e= prompt("Enter Mother Name:")
+      window.localStorage.setItem("UserName",a)
+      window.localStorage.setItem("Password",b)
+      window.localStorage.setItem("Email",c)
+      window.localStorage.setItem("DOB",d)
+      window.localStorage.setItem("MotherName",e)
+    }
+    var btn = document.createElement("button")
+    btn.innerText ="See User Details Here"
+    btn.setAttribute("class","b1")
+    document.body.appendChild(btn)
+    btn.addEventListener("click",()=>{
+        window.location.assign("./local2.html")
+    })
+    
+    </script>
+</body>
+</html>
